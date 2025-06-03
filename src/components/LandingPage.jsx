@@ -27,7 +27,7 @@ function LandingPage({ onAuthSuccess }) {
     let options = ['user'];
     if (type.includes('provider')) {
       defaultRole = 'doctor';
-      options = ['doctor', 'tiffin'];
+      options = ['doctor', 'educator'];
     }
     setMode(type);
     setForm({ name: '', email: '', password: '', role: defaultRole });
@@ -69,8 +69,12 @@ function LandingPage({ onAuthSuccess }) {
         setSuccessMsg('Sign in successful!');
         if (onAuthSuccess) onAuthSuccess(res.data);
         localStorage.setItem('user', JSON.stringify(res?.data?.user || res?.data?.name));
+        console.log(res.data)
         if (res.data.role === 'doctor') {
           navigate('/doctorpanel');
+        }
+        else if (res.data.role === 'educator') {
+          navigate('/educatorpanel');
         } else {
           navigate('/home');
         }
@@ -223,7 +227,7 @@ function LandingPage({ onAuthSuccess }) {
                     className="w-full p-3 border border-blue-200 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 ease-in-out bg-blue-50 text-black"
                   >
                     <option value="doctor">Doctor</option>
-                    <option value="tiffinProvider">Tiffin Provider</option>
+                    <option value="educator">Educator</option>
                   </select>
                 </div>
               )}

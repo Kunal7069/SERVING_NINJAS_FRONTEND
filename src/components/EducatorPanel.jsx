@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function DoctorPanel() {
+function EducatorPanel() {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [appointments, setAppointments] = useState([]);
@@ -37,7 +37,7 @@ function DoctorPanel() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ eudcator_name: name }),  // You can make this dynamic as needed
+        body: JSON.stringify({ educator_name: name }),  // You can make this dynamic as needed
       });
   
       if (!response.ok) {
@@ -58,11 +58,11 @@ function DoctorPanel() {
 
   const [form, setForm] = useState({
     center_name: '',
-    doctor_name: '',
+    educator_name: '',
     address: '',
     phone: '',
     city: '',
-    speciality: '',
+    subject: '',
     slots: [
       { start_time: '', end_time: '' }
     ]
@@ -119,7 +119,7 @@ function DoctorPanel() {
     }
 
     const result = await response.json();
-    alert('Doctor registered successfully!');
+    alert('Educator registered successfully!');
     console.log('API response:', result);
 
     // Optional: Reset the form
@@ -129,7 +129,7 @@ function DoctorPanel() {
       address: '',
       phone: '',
       city: '',
-      speciality: '',
+      subject: '',
       slots: [{ start_time: '', end_time: '' }],
     });
   } catch (error) {
@@ -148,7 +148,7 @@ function DoctorPanel() {
           Open Appointments
         </button>
 
-        <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Doctor Panel</h2>
+        <h2 className="text-3xl font-bold text-center text-blue-800 mb-8">Educator Panel</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -163,11 +163,11 @@ function DoctorPanel() {
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-semibold mb-1">Doctor Name</label>
+              <label className="block text-gray-700 font-semibold mb-1">Educator Name</label>
               <input
                 type="text"
-                name="doctor_name"
-                value={form.doctor_name}
+                name="educator_name"
+                value={form.educator_name}
                 onChange={handleChange}
                 required
                 className="text-black w-full p-3 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -207,11 +207,11 @@ function DoctorPanel() {
               />
             </div>
             <div>
-              <label className="block text-gray-700 font-semibold mb-1">Speciality</label>
+              <label className="block text-gray-700 font-semibold mb-1">Subject</label>
               <input
                 type="text"
-                name="speciality"
-                value={form.speciality}
+                name="subject"
+                value={form.subject}
                 onChange={handleChange}
                 required
                 className="text-black w-full p-3 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -302,19 +302,20 @@ function DoctorPanel() {
               <table className="w-full border-collapse border border-gray-300 text-black">
                 <thead>
                   <tr>
-                    <th className="border border-gray-300 px-3 py-2">Patient Name</th>
+                    <th className="border border-gray-300 px-3 py-2">Studnent Name</th>
                     <th className="border border-gray-300 px-3 py-2">Age</th>
                     <th className="border border-gray-300 px-3 py-2">Gender</th>
                     <th className="border border-gray-300 px-3 py-2">Phone</th>
                     <th className="border border-gray-300 px-3 py-2">Date</th>
                     <th className="border border-gray-300 px-3 py-2">Slot Time</th>
                     <th className="border border-gray-300 px-3 py-2">Address</th>
+                    <th className="px-4 py-2">Meet</th>
                   </tr>
                 </thead>
                 <tbody>
                   {appointments.map((appt) => (
                     <tr key={appt.id} className="even:bg-gray-100 text-black">
-                      <td className="border border-gray-300 px-3 py-2">{appt.patient_name}</td>
+                      <td className="border border-gray-300 px-3 py-2">{appt.student_name}</td>
                       <td className="border border-gray-300 px-3 py-2">{appt.age}</td>
                       <td className="border border-gray-300 px-3 py-2">{appt.gender}</td>
                       <td className="border border-gray-300 px-3 py-2">{appt.phone}</td>
@@ -323,6 +324,16 @@ function DoctorPanel() {
                         {appt.slot.start_time} to {appt.slot.end_time}
                       </td>
                       <td className="border border-gray-300 px-3 py-2">{appt.address}</td>
+                      <td className="px-4 py-2">
+                        <a
+                          href="https://meet.google.com/nrj-mkgv-bau"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-blue-600 hover:underline"
+                        >
+                          Join Meet
+                        </a>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -335,4 +346,4 @@ function DoctorPanel() {
   );
 }
 
-export default DoctorPanel;
+export default EducatorPanel;

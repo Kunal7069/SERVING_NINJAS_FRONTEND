@@ -7,6 +7,7 @@ import TiffinServices from './components/TiffinServices';
 import DoctorServices from './components/DoctorServices';
 import LandingPage from './components/LandingPage';
 import DoctorPanel from './components/DoctorPanel';
+import EducatorPanel from './components/EducatorPanel';
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/tiffin" element={<TiffinServices />} />
         <Route path="/doctor" element={<DoctorServices />} />
         <Route path="/doctorpanel" element={<DoctorPanel />} />
+        <Route path="/educatorpanel" element={<EducatorPanel />} />
       </Routes>
     </Router>
   );

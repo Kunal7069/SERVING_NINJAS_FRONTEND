@@ -103,8 +103,9 @@ function DoctorPanel() {
   const handleSubmit =  async (e) => {
     e.preventDefault();
     // Backend integration will be added later
+
     try {
-    const response = await fetch('https://serving-ninjas.onrender.com/doctor/', {
+    const response = await fetch('https://serving-ninjas.onrender.com/doctor', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

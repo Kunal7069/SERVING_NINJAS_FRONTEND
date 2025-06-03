@@ -42,7 +42,7 @@ function Home() {
               className="w-56 h-56 mb-4 rounded-xl shadow-md border-2 border-yellow-200 object-cover"
             />
             <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-300 text-yellow-900 font-bold py-2 px-4 rounded-full shadow hover:shadow-lg transition duration-300 mt-2 hover:from-yellow-300 hover:to-yellow-400">
-              Tiffin Service
+              Education Service
             </button>
           </div>
         </Link>
