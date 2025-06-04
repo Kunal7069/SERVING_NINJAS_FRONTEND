@@ -296,7 +296,7 @@ const fetchSlots = async () => {
             onChange={handleChange}
             required
             className="text-black w-full p-2 border border-blue-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400 transition duration-300 ease-in-out"
-            placeholder="Male / Female / Other"
+            placeholder="male / female / other"
           />
         </div>
 
