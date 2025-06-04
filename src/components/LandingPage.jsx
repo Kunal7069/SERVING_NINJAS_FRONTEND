@@ -103,7 +103,7 @@ function LandingPage({ onAuthSuccess }) {
           </span>
         </div>
         <p className="mt-4 text-lg text-blue-700 max-w-2xl text-center font-medium">
-          Welcome to <span className="font-bold text-cyan-700">Serving Ninjas</span> — your one-stop platform for seamless tiffin and doctor services. Sign up to discover, book, and manage essential services with ease. Fast, reliable, and always at your service!
+          Welcome to <span className="font-bold text-cyan-700">Serving Ninjas</span> — your one-stop platform for seamless education , guidance and doctor services. Sign up to discover, book, and manage essential services with ease. Fast, reliable, and always at your service!
         </p>
       </div>
 

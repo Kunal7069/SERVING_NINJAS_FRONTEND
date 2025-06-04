@@ -240,7 +240,7 @@ function TiffinServices() {
         {filteredServices.map(service => (
           <div key={service.id} className="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl transition-transform duration-300 ease-in-out transform hover:scale-105 border border-yellow-200">
               <h3 className="text-2xl font-semibold mb-3 text-blue-800">{service.center_name}</h3>
-            <p className="text-blue-600 mb-2">Doctors: {service.educator_name}</p>
+            <p className="text-blue-600 mb-2">Educator: {service.educator_name}</p>
             <p className="text-blue-600 mb-2">Address: {service.address}</p>
             <p className="text-blue-600 mb-2">Phone: {service.phone}</p>
             <p className="text-blue-600 mb-2">City: {service.city}</p>

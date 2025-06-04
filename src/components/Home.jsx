@@ -32,7 +32,7 @@ function Home() {
         </div>
       )}
       <h1 className="text-5xl font-extrabold mb-6 drop-shadow-lg tracking-wide text-blue-900">Welcome to Serving Ninjas!</h1>
-      <p className="text-xl mb-10 max-w-xl text-center text-blue-800">Choose a service to get started and explore our offerings. We provide the best tiffin and doctor services in your city!</p>
+      <p className="text-xl mb-10 max-w-xl text-center text-blue-800">Choose a service to get started and explore our offerings. We provide the best education , guidance and doctor services in your city!</p>
       <div className="flex flex-wrap justify-center gap-10 mt-4">
         <Link to="/tiffin" className="flex flex-col items-center group">
           <div className="bg-white rounded-2xl shadow-xl border border-yellow-100 p-6 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
