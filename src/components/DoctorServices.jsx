@@ -29,7 +29,7 @@ function DoctorServices() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ patient_name: form.name }),
+        body: JSON.stringify({ patient_name: name }),
       });
       
       const data = await response.json();
