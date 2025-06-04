@@ -248,7 +248,7 @@ function TiffinServices() {
       )}
       </div>
 
-      <h2 className="text-5xl font-bold text-center mb-12 text-amber-800 drop-shadow-lg">Education Services</h2>
+      <h2 className="text-5xl font-bold text-center mb-12 text-amber-800 drop-shadow-lg">Educalm Services</h2>
       <input
         type="text"
         placeholder="Search by name, contact, address, or services"
@@ -286,7 +286,7 @@ function TiffinServices() {
             >
               &times;
             </button>
-            <h3 className="text-2xl font-bold mb-4 text-amber-800">Book Your Meal</h3>
+            <h3 className="text-2xl font-bold mb-4 text-amber-800">Book Your Appointment</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label className="block text-gray-700 font-semibold mb-1">Name</label>
