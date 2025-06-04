@@ -143,8 +143,28 @@ function TiffinServices() {
     });
 
     const result = await res.json();
-    alert("Appointment booked successfully!");
-    closeModal(); // Optionally reset form as well
+
+    let email = "hii"
+    const storedData = localStorage.getItem('userData');
+    if (storedData) {
+      const userData = JSON.parse(storedData);
+      email = userData.email
+      
+    }
+
+    const emailRes = await fetch("https://serving-ninjas.onrender.com/appointment/send-email", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      receiver_email: email,
+      body: `Your appointment has been booked successfully. Confirmation for: ${email}`
+    }),
+  });
+
+  const emailResult = await emailRes.json();
+  console.log("Email sent response:", emailResult);
+  alert("Appointment booked successfully!");
+  closeModal(); // Optionally reset form as well
   } catch (err) {
     console.error(err);
     alert("Failed to book appointment.");
