@@ -58,15 +58,70 @@ function Home() {
             </button>
           </div>
         </Link>
+
       </div>
-      <footer className="bg-blue-900 text-white py-4 w-full text-center absolute bottom-0 border-t border-blue-200">
+      <br></br>
+      <br></br>
+      <h1 className="text-5xl font-extrabold mb-6 drop-shadow-lg tracking-wide text-blue-900">Upcoming Services</h1>
+      <div className="flex flex-wrap justify-center gap-10 mt-4">
+        {/* <Link to="/tiffin" className="flex flex-col items-center group"> */}
+          <div className="bg-white rounded-2xl shadow-xl border border-yellow-100 p-6 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.3NQtvAH1uH0sN8QGa-DDPgAAAA&pid=Api&P=0&h=180"
+              alt="Tiffin Service"
+              className="w-56 h-56 mb-4 rounded-xl shadow-md border-2 border-yellow-200 object-cover"
+            />
+            <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-300 text-yellow-900 font-bold py-2 px-4 rounded-full shadow hover:shadow-lg transition duration-300 mt-2 hover:from-yellow-300 hover:to-yellow-400">
+              Tiffin Service
+            </button>
+          </div>
+        {/* </Link> */}
+        {/* <Link to="/doctor" className="flex flex-col items-center group"> */}
+          <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-6 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+            <img
+              src="https://tse1.mm.bing.net/th?id=OIP.x1D-BpsdJ-z7YB1u_8XnHAHaEN&pid=Api&P=0&h=180"
+              alt="Hospital Service"
+              className="w-56 h-56 mb-4 rounded-xl shadow-md border-2 border-blue-200 object-cover"
+            />
+            <button className="w-full bg-gradient-to-r from-blue-400 to-cyan-300 text-blue-900 font-bold py-2 px-4 rounded-full shadow hover:shadow-lg transition duration-300 mt-2 hover:from-cyan-300 hover:to-blue-400">
+              Sew It Yourself
+            </button>
+          </div>
+        {/* </Link> */}
+        {/* <Link to="/doctor" className="flex flex-col items-center group"> */}
+          <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-6 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+            <img
+              src="https://tse2.mm.bing.net/th?id=OIP.yfVXhQe7k6h-5CpIxxLFagHaE8&pid=Api&P=0&h=180"
+              alt="Hospital Service"
+              className="w-56 h-56 mb-4 rounded-xl shadow-md border-2 border-blue-200 object-cover"
+            />
+            <button className="w-full bg-gradient-to-r from-yellow-400 to-yellow-300 text-yellow-900 font-bold py-2 px-4 rounded-full shadow hover:shadow-lg transition duration-300 mt-2 hover:from-cyan-300 hover:to-blue-400">
+              Marketing 
+            </button>
+          </div>
+        {/* </Link> */}
+         {/* <Link to="/doctor" className="flex flex-col items-center group"> */}
+          <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-6 transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+            <img
+              src="https://tse4.mm.bing.net/th?id=OIP.OdnxZFvxttkIREFWLHekZQHaGg&pid=Api&P=0&h=180"
+              alt="Hospital Service"
+              className="w-56 h-56 mb-4 rounded-xl shadow-md border-2 border-blue-200 object-cover"
+            />
+            <button className="w-full bg-gradient-to-r from-blue-400 to-cyan-300 text-blue-900 font-bold py-2 px-4 rounded-full shadow hover:shadow-lg transition duration-300 mt-2 hover:from-cyan-300 hover:to-blue-400">
+              Diet consultancy
+            </button>
+          </div>
+        {/* </Link> */}
+
+      </div>
+      {/* <footer className="bg-blue-900 text-white py-4 w-full text-center absolute bottom-0 border-t border-blue-200">
         <p className="text-sm">&copy; 2023 Service Website. All rights reserved.</p>
         <div className="flex justify-center space-x-4 mt-2">
           <a href="#" className="hover:underline hover:text-cyan-200 transition-colors">Privacy Policy</a>
           <a href="#" className="hover:underline hover:text-cyan-200 transition-colors">Terms of Service</a>
           <a href="#" className="hover:underline hover:text-cyan-200 transition-colors">Contact Us</a>
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }
